@@ -8,43 +8,24 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 ">
-            <table class="table ">
-                <thead>
+      <div class="col-12">
+          <table class="table">
+              <thead>
                   <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Produto</th>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Data</th>
+                      <th scope="col">ID</th>
+                      <th scope="col">PRODUTO</th>
+                      <th scope="col">UNIDADE</th>
                   </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Revista</td>
-                      <td>2</td>
-                      <td>21/08/2023</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jornal</td>
-                      <td>5</td>
-                      <td>09/03/2023</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Livro</td>
-                      <td>4</td>
-                      <td>19/05/2023</td>
-                    </tr>
-                  </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            <button type="button" class="btn btn-outline-secondary" >Cancelar</button>
-        </div>
-    
-    </div>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let p of produtos">
+                    <td>{{p.nome}}</td>
+                      <td>{{p.idProduto}}</td>
+                      <td class="text-center">{{p.siglaUnidade}}</td>
+                      <td>{{p.unidadeId}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
 </div>

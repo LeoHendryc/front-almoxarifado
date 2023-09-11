@@ -1,35 +1,32 @@
+
 <div class="container">
-    <div class="row">
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            <h1 class="mt-2">Cadastrar</h1>
+    <!-- <h4>Data da exibição da lista: {{dataAtual | date:"dd/MM/yyyy"}}</h4> -->
+        <div class="row">
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <h1 class=" text-center mt-3">Lista de Produtos</h1>
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <a type="button" class="btn btn-primary"  [routerLink]="['/novo-produto']">Novo Produto</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PRODUTO</th>
+                            <th scope="col">UNIDADE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of produtos">
+                            <td>{{p.idProduto}}</td>
+                            <td>{{p.nome}}</td>
+                            <td class="text-center">{{p.siglaUnidade}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <div class="row ">
-        <div class="col-8 produto">
-            <label for="formGroupExampleInput" class="form-label">Produto</label>
-            <input type="text" class="form-control " id="formGroupExampleInput" placeholder="Informe o produto">
-        </div>
-        <div class="col-5 codigo">
-    
-            <label for="inputUnidade" class="form-label">Unidade</label>
-            <select id="inputUnidade" class="form-select">
-                <option selected>Selecione</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-7">
-            <button type="button" class="btn btn-primary" >Cadastrar</button>
-            <button type="button" class="btn btn-outline-secondary" >Cancelar</button>
-        </div>
-    
-    </div>
-
-
-
-</div>
-   

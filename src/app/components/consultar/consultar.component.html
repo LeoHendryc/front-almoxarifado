@@ -1,27 +1,32 @@
 
 <div class="container">
+<!-- <h4>Data da exibição da lista: {{dataAtual | date:"dd/MM/yyyy"}}</h4> -->
     <div class="row">
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            <h1 class="mt-2">Consultar</h1>
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <h1 class=" text-center mt-3">Lista de Produtos</h1>
         </div>
-    </div>
-    <div class="row ">
-        <div class="col-8 produto">
-            <label for="formGroupExampleInput" class="form-label">Produto</label>
-            <input type="text" class="form-control " id="formGroupExampleInput" placeholder="Informe o produto">
-        </div>
-        <div class="col-5 codigo">
-            <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Código do Produto</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Informe o código do produto">
-            </div>
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <input class="form-control-lg mb-2" type="text" #conteudo (keyup)="filtrarProdutos(conteudo.value)" placeholder="Digite o nome do produto"/>
         </div>
     </div>
     <div class="row">
-        <div class="col-7">
-            <button type="button" class="btn btn-primary" >Confirmar</button>
-            <button type="button" class="btn btn-outline-secondary" >Cancelar</button>
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">PRODUTO</th>
+                        <th scope="col">QUANTIDADE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of produtos">
+                        <td>{{p.nome}}</td>
+                        <td class="text-center">{{p.unidadeId}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
+
    
