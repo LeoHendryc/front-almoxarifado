@@ -1,1 +1,31 @@
-<p>entrada works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <h1 class="mt-2">LISTA DE ENTRADAS</h1>
+        </div>
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <a type="button" class="btn btn-primary"  [routerLink]="['/nova-entrada']">Nova Entrada</a>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">PRODUTO</th>
+                      <th scope="col">UNIDADE</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let p of produtos">
+                    <td>{{p.nome}}</td>
+                      <td>{{p.idProduto}}</td>
+                      <td class="text-center">{{p.siglaUnidade}}</td>
+                      <td>{{p.unidadeId}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

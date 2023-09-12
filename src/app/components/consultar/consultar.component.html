@@ -1,1 +1,32 @@
-<p>consultar works!</p>
+
+<div class="container">
+<!-- <h4>Data da exibição da lista: {{dataAtual | date:"dd/MM/yyyy"}}</h4> -->
+    <div class="row">
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <h1 class=" text-center mt-3">Lista de Produtos</h1>
+        </div>
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <input class="form-control-lg mb-2" type="text" #conteudo (keyup)="filtrarProdutos(conteudo.value)" placeholder="Digite o nome do produto"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">PRODUTO</th>
+                        <th scope="col">QUANTIDADE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of produtos">
+                        <td>{{p.nome}}</td>
+                        <td class="text-center">{{p.unidadeId}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+   

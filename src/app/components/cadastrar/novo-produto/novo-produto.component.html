@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center align-items-center">
+        <h1 class="mt-2">Novo Produto</h1>
+      </div>
+    </div>
+    <div class="row" *ngIf="produtoCadastrado">
+        <div class="col-4">
+            <div class="alert alert-success" role="alert">
+                Produto cadastrado com sucesso!
+              </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-8 produto">
+        <form #formulario="ngForm">
+          <div class="mb-3">
+            <label for="nomeProduto" class="form-label">Nome do Produto</label>
+            <input type="text" class="form-control" id="nomeProduto" name="nomeProduto" [(ngModel)]="novoProduto.nome" placeholder="Informe o produto">
+          </div>
+          <div class="mb-3">
+            <label for="inputUnidade" class="form-label">Unidade de Medida</label>
+            <select id="inputUnidade" class="form-select" name="unidadeProduto" [(ngModel)]="novoProduto.unidadeId">
+              <option selected disabled>Selecione</option>
+              <option value="1">grama</option>
+              <option value="2">unidade</option>
+              <option value="3">litro</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <button type="button" class="btn btn-primary" (click)="cadastrarProduto(formulario)">Cadastrar</button>
+            <button type="button" class="btn btn-outline-secondary" [routerLink]="['/cadastrar']">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+</div>
+

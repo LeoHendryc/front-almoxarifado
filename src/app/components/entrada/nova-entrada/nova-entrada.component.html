@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <h1 class="mt-2">Entrada</h1>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-6 produto">
+            <label for="produtoSelect" class="form-label">Produto</label>
+            <select class="form-select" id="produtoSelect" [(ngModel)]="produtoSelecionado" name="produtoSelecionado">
+              <option disabled selected>Selecione um produto</option>
+              <option *ngFor="let produto of produtos" [value]="produto.idProduto">{{ produto.nome }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 codigo">
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Código do Produto</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Informe o código do produto">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 codigo">
+            <label for="inputUnidade" class="form-label">Unidade</label>
+            <select id="inputUnidade" class="form-select">
+                <option selected>Selecione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="col-6 codigo">
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Data da Entrada</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Informe a data de entrada">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            <button type="button" class="btn btn-primary" >Confirmar</button>
+            <button type="button" class="btn btn-outline-secondary" [routerLink]="['/entrada']">Cancelar</button>
+        </div>
+    </div>
+</div>
+   

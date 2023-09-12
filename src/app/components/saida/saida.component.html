@@ -1,1 +1,44 @@
-<p>saida works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <h1 class="mt-2">LISTA DE SAÍDAS</h1>
+        </div>
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <a type="button" class="btn btn-primary"  [routerLink]="['/nova-saida']">Nova Saída</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 ">
+            <table class="table ">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Data</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Revista</td>
+                      <td>2</td>
+                      <td>21/08/2023</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jornal</td>
+                      <td>5</td>
+                      <td>09/03/2023</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Livro</td>
+                      <td>4</td>
+                      <td>19/05/2023</td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+</div>
